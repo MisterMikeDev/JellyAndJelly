@@ -1,0 +1,60 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Footer from "@/components/Footer.astro";
+import { TITLE_PAGE, DESCRIPTION_PAGE } from "@/data/consts";
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/webp" href="/assets/logo.webp" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{TITLE_PAGE}</title>
+        <meta name="description" content={DESCRIPTION_PAGE} />
+        <meta name="author" content="Diego Emmanuel Rodriguez Ruvalcaba" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={TITLE_PAGE} />
+        <meta property="og:description" content={DESCRIPTION_PAGE} />
+        <meta property="og:image" content="/assets/logo.webp" />
+        <meta property="og:url" content="https://mrmikedev.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="MrMikeDev" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@_MrMikeDev" />
+        <meta name="twitter:creator" content="@_MrMikeDev" />
+        <meta name="twitter:title" content={TITLE_PAGE} />
+        <meta name="twitter:description" content={DESCRIPTION_PAGE} />
+        <meta name="twitter:image" content="/assets/logo.webp" />
+        <link rel="preload" href="/fonts/Inter.ttf" as="font" type="font/ttf" />
+        <link rel="preload" href="/fonts/Pacifico.ttf" as="font" type="font/ttf" />
+        <link rel="preload" href="/assets/logo.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/assets/leafs-1.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/assets/leafs-2.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/assets/leafs-3.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/assets/leafs-4.webp" as="image" type="image/webp" />
+
+        <style>
+            @font-face {
+                font-family: "Pacifico";
+                src: url("/fonts/Pacifico") format("ttf");
+                font-weight: 500;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "Inter";
+                src: url("/fonts/Inter") format("ttf");
+                font-weight: 500;
+                font-style: normal;
+                font-display: swap;
+            }
+        </style>
+
+        <ViewTransitions />
+    </head>
+    <body class="font-inter bg-background">
+        <slot />
+        <Footer />
+    </body>
+</html>

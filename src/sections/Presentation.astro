@@ -1,0 +1,33 @@
+---
+import BtnScrollHome from "@/components/BtnScrollHome.astro";
+import Leafs from "@/components/Leafs.astro";
+---
+
+<section
+    class="bg-green-pastel w-full h-[100dvh] grid place-content-center relative overflow-hidden"
+>
+    <div class="z-[11] flex flex-col gap-4 mb-10">
+        <img
+            src="/assets/logo.webp"
+            alt="Jelly and Jelly main logo."
+            class="w-[25rem] mx-auto animate-slide-up-fade animate-duration-1000 animate-delay-500"
+            draggable="false"
+        />
+
+        <h1
+            class="-mt-10 text-white text-5xl md:text-6xl text-center animate-slide-up-fade animate-duration-1000 animate-delay-1000 font-pacifico"
+        >
+            Jelly and Jelly
+        </h1>
+
+        <h2
+            class="mx-auto max-w-[20ch] md:max-w-[25ch] lg:max-w-full text-balance text-white text-3xl text-center animate-slide-up-fade animate-duration-1000 animate-delay-1000"
+        >
+            La empresa de mermeladas lider en el mercado
+        </h2>
+    </div>
+
+    <BtnScrollHome />
+
+    <Leafs />
+</section>

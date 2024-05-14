@@ -1,0 +1,8 @@
+---
+import Product from "@/components/Product.astro";
+import { PRODUCTS } from "@/data/consts";
+---
+
+<section class="flex flex-col">
+    {PRODUCTS.map((product) => <Product product={product} />)}
+</section>

@@ -1,0 +1,63 @@
+---
+import Separator from "@/components/Separator.astro";
+import Facebook from "@/icons/Facebook.astro";
+import TikTok from "@/icons/TikTok.astro";
+import Twitter from "@/icons/Twitter.astro";
+import Phone from "@/icons/Phone.astro";
+import Email from "@/icons/Mail.astro";
+import { SOCIAL_MEDIA } from "@/data/consts";
+---
+
+<section class="text-center my-24 flex flex-col justify-center items-center">
+    <h2 class="font-pacifico text-5xl text-center mb-4">Contacto</h2>
+
+    <span class="flex gap-2 hover:underline text-xl">
+        <Phone />
+        <h4 class="font-pacifico font-semibold">Telefono:</h4>
+        <a href={SOCIAL_MEDIA.phone}>+52-233-445-7890</a>
+    </span>
+
+    <span class="flex gap-2 hover:underline text-xl">
+        <Email />
+        <h4 class="font-pacifico font-semibold">Email:</h4>
+        <a href={SOCIAL_MEDIA.email}>jellyandjellycompany@gmail.com</a>
+    </span>
+
+    <Separator />
+
+    <h3 class="font-pacifico text-2xl text-center mb-6">Nuestras redes sociales:</h3>
+    <ul class="flex justify-center gap-4 text-2xl">
+        <li>
+            <a
+                href={SOCIAL_MEDIA.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-gray-500 text-white scale-110 w-10 h-10 rounded-full grid place-items-center hover:brightness-90 transition-all duration-300 ease-in-out"
+            >
+                <Facebook />
+            </a>
+        </li>
+
+        <li>
+            <a
+                href={SOCIAL_MEDIA.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-gray-500 text-white scale-110 w-10 h-10 rounded-full grid place-items-center hover:brightness-90 transition-all duration-300 ease-in-out"
+            >
+                <TikTok />
+            </a>
+        </li>
+
+        <li>
+            <a
+                href={SOCIAL_MEDIA.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-gray-500 text-white scale-110 w-10 h-10 rounded-full grid place-items-center hover:brightness-90 transition-all duration-300 ease-in-out"
+            >
+                <Twitter />
+            </a>
+        </li>
+    </ul>
+</section>

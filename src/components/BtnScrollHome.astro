@@ -1,0 +1,19 @@
+---
+import ArrowDown from "@/icons/ArrowDown.astro";
+---
+
+<button
+    id="nextSection"
+    class="absolute bottom-14 left-1/2 transform -translate-x-1/2 z-10 text-white bg-gray-600/75 w-20 h-20 grid place-content-center rounded-full animate-fade-in-up animate-duration-1000 animate-delay-[1500ms]"
+>
+    <ArrowDown />
+</button>
+
+<script>
+    const btn = document.getElementById("nextSection");
+    const nextSection = document.querySelector("#home");
+
+    btn?.addEventListener("click", () => {
+        nextSection?.scrollIntoView({ behavior: "smooth" });
+    });
+</script>
