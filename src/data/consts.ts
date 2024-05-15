@@ -21,7 +21,8 @@ export const PRODUCTS = [
         slug: "mermelada-de-fresa",
         image: "fresa.webp",
         position: "left",
-        color: "#D91847"
+        color: "#D91847",
+        slashColor: "217,24,71"
     },
     {
         title: "Mermelada de piña",
@@ -30,7 +31,8 @@ export const PRODUCTS = [
         slug: "mermelada-de-pina",
         image: "piña.webp",
         position: "right",
-        color: "#F8AC0B"
+        color: "#F8AC0B",
+        slashColor: "248,172,11"
     },
     {
         title: "Mermelada de sandia",
@@ -39,6 +41,7 @@ export const PRODUCTS = [
         slug: "mermelada-de-sandia",
         image: "sandia.webp",
         position: "left",
-        color: "#FD4319"
+        color: "#FD4319",
+        slashColor: "253,67,25"
     }
 ] as Product[];

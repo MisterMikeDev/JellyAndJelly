@@ -28,14 +28,19 @@ const { title, description, image, color, slug, position } = Astro.props.product
             style={`background-color: ${color};`}
         >
             <div class="flex flex-col gap-4 items-center">
-                <h2 class="text-3xl font-pacifico">{title}</h2>
-                <p class="max-w-[35ch] text-justify">{description}</p>
+                <h2 class="text-3xl font-pacifico" transition:name={`title ${slug} fade`}>
+                    {title}
+                </h2>
+                <p class="max-w-[35ch] text-justify" transition:name={`description ${slug} fade`}>
+                    {description}
+                </p>
             </div>
 
             <img
                 src={`/products/${image}`}
                 alt={`Foto del producto ${title}`}
                 class="w-80 aspect-square object-cover rounded-lg"
+                transition:name={`image ${slug} fade`}
             />
         </main>
 

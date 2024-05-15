@@ -5,4 +5,5 @@ export interface Product {
     image: string;
     position: "left" | "right";
     color: `#${string}`;
+    slashColor: string;
 }

@@ -6,6 +6,7 @@ import { TITLE_PAGE, DESCRIPTION_PAGE } from "@/data/consts";
 
 <html lang="es">
     <head>
+        <ViewTransitions fallback="none" />
         <meta charset="utf-8" />
         <link rel="icon" type="image/webp" href="/assets/logo.webp" />
         <meta name="viewport" content="width=device-width" />
@@ -36,7 +37,7 @@ import { TITLE_PAGE, DESCRIPTION_PAGE } from "@/data/consts";
         <style>
             @font-face {
                 font-family: "Pacifico";
-                src: url("/fonts/Pacifico") format("ttf");
+                src: url("/fonts/Pacifico.ttf") format("truetype");
                 font-weight: 500;
                 font-style: normal;
                 font-display: swap;
@@ -44,14 +45,12 @@ import { TITLE_PAGE, DESCRIPTION_PAGE } from "@/data/consts";
 
             @font-face {
                 font-family: "Inter";
-                src: url("/fonts/Inter") format("ttf");
+                src: url("/fonts/Inter.ttf") format("truetype");
                 font-weight: 500;
                 font-style: normal;
                 font-display: swap;
             }
         </style>
-
-        <ViewTransitions />
     </head>
     <body class="font-inter bg-background">
         <slot />
